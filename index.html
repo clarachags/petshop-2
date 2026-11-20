@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> MimoPet - PetShop </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- cabeçalho -->
+    <header>
+        <h1>🐾 MimoPet - PetShop 🐾</h1>
+        <p>Amor e cuidado para mimar o seu melhor amigo!</p>
+
+        <nav>
+            <a href="#inicio">Início</a> |
+            <a href="#servicos">Serviços</a> |
+            <a href="#produtos">Produtos</a> |
+            <a href="#contato">Contato</a> |
+            <a href="#endereco">Endereço</a> |
+            <a href="#cadastro-clientes">Cadastro de Clientes</a> |
+            <a href="#cadastro-pets">Cadastro de Pets</a>
+        </nav>
+    </header>
+
+    <!-- recursos de acessibilidade: leitura por voz -->
+    <section class="acessibilidade" aria-labelledby="titulo-acessibilidade">
+        <h2 id="titulo-acessibilidade">Acessibilidade</h2>
+
+        <p id="orientacao-leitura">
+            Utilize os controles para ouvir o conteúdo da página.
+        </p>
+
+        <div class="controles-leitura">
+            <button type="button" id="ouvir-conteudo"
+                aria-describedby="orientacao-leitura">
+                Ouvir conteúdo
+            </button>
+
+            <button type="button" id="pausar-leitura">
+                Pausar leitura
+            </button>
+
+            <button type="button" id="parar-leitura">
+                Parar leitura
+            </button>
+        </div>
+
+        <p id="status-leitura" role="status" aria-live="polite"></p>
+    </section>
+
+    <hr>
+
+    <!-- apresentação -->
+    <main>
+        <section id="inicio">
+            <h2>Bem-vindo à MimoPet!</h2>
+
+            <p>
+                Aqui seu pet recebe todo o carinho e cuidado que merece. 
+                Oferecemos serviços especiais para cães e gatos!
+            </p>
+
+             <div id="status-funcionamento">
+                <p id="mensagem-funcionamento" role="status" aria-live="polite">
+                    Verificando horário de funcionamento...
+                </p>
+            </div>
+
+            <!-- carrossel de imagens -->
+            <div id="carouselMimoPet" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+
+                <!-- indicadores -->
+                <div class="carousel-indicators">
+
+                    <button type="button" data-bs-target="#carouselMimoPet"
+                        data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Imagem 1: MimoPet">
+                    </button>
+
+                    <button type="button" data-bs-target="#carouselMimoPet"
+                        data-bs-slide-to="1"
+                        aria-label="Imagem 2: Banho">
+                    </button>
+
+                    <button type="button" data-bs-target="#carouselMimoPet"
+                        data-bs-slide-to="2"
+                        aria-label="Imagem 3: Tosa">
+                    </button>
+
+                    <button type="button" data-bs-target="#carouselMimoPet"
+                        data-bs-slide-to="3"
+                        aria-label="Imagem 4: Transporte">
+                    </button>
+
+                </div>
+
+                <!-- imagens -->
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+
+                        <img src="imagensfw/mimo.jpg"
+                            class="d-block w-100"
+                            alt="Imagem ilustrativa da MimoPet">
+                    </div>
+
+                    <div class="carousel-item">
+                        
+                        <img src="imagensfw/banhoimg.jpg"
+                            class="d-block w-100"
+                            alt="Gato relaxando em uma banheira">
+
+                        <div class="carousel-caption">
+                            <h5>Banho</h5>
+                            <p>Seu pet sempre limpinho e cheiroso!</p>
+                        </div>
+
+                    </div>
+
+                    <div class="carousel-item">
+
+                        <img src="imagensfw/tosaimg.jpg"
+                            class="d-block w-100"
+                            alt="Cachorro recebendo cuidados de tosa">
+
+                        <div class="carousel-caption">
+                            <h5>Tosa</h5>
+                            <p>Beleza e cuidado em cada detalhe.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="carousel-item">
+
+                        <img src="imagensfw/buscaimg.jpg"
+                            class="d-block w-100"
+                            alt="Cachorro sendo transportado com segurança">
+
+                        <div class="carousel-caption">
+                            <h5>Tele-busca</h5>
+                            <p>Transporte seguro e especializado para seu pet.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- botão anterior -->
+                <button class="carousel-control-prev" type="button"
+                    data-bs-target="#carouselMimoPet"
+                    data-bs-slide="prev"
+                    aria-label="Imagem anterior">
+
+                    <span class="carousel-control-prev-icon"
+                        aria-hidden="true"></span>
+
+                </button>
+
+                <!-- botão próximo -->
+                <button class="carousel-control-next" type="button"
+                    data-bs-target="#carouselMimoPet"
+                    data-bs-slide="next"
+                    aria-label="Próxima imagem">
+
+                    <span class="carousel-control-next-icon"
+                        aria-hidden="true"></span>
+
+                </button>
+
+            </div>
+
+            <p>
+                <a href="#contato">Entre em contato!</a>
+            </p>
+        </section>
+
+        <hr>
+
+    <!-- serviços -->
+        <section id="servicos">
+            <h2>Nossos Serviços</h2>
+
+            <article>
+                <h3>🛁 Banho</h3>
+                <p>Banho para deixar seu pet limpo e cheiroso.<br><small>Disponível com opção de tele-busca.</small></p>
+                <p>Valores a partir de R$ 60,00</p>
+                <a href="#agendamento">Agende agora!</a>
+            </article>
+
+            <article>
+                <h3>✂️ Tosa</h3>
+                <p>Tosa profissional com cuidado e carinho.<br><small>Disponível com opção de tele-busca.</small></p>
+                <p>Valores a partir de R$ 30,00</p>
+                <a href="#agendamento">Agende agora!</a>
+            </article>
+            
+                <p><em>
+                    Os valores de banho e tosa podem sofrer alterações de acordo com o porte
+                    e com o tipo de pelagem do seu pet.
+                </em></p>
+
+            <article>
+                <h3>🚗 Tele-busca</h3>
+                <p>Transporte especializado e seguro para o seu pet.</p>
+                <p>Disponível para todos os nossos serviços.</p>
+                <p>Valor: R$ 20,00</p>
+                <a href="#agendamento">Agende agora!</a>
+            </article>
+        </section>
+
+        <hr>
+
+    <!-- produtos -->      
+        <section id="produtos">
+            <h2>Nossos Produtos</h2>
+
+            <!-- categoria: acessórios -->
+            <section>
+                <h3>Acessórios</h3>
+
+                <article>
+                    <h4>Arranhador para gatos</h4>
+                    <img
+                        src="imagensfw/acessorio1.jpg"
+                        alt="Arranhador para gatos"
+                        width="200"
+                    >
+                    <p>Arranhador grande para gatos.</p>
+                    <p>R$ 214,90</p>
+                </article>
+
+                <article>
+                    <h4>Caminha para pets</h4>
+                    <img
+                        src="imagensfw/acessorio2.jpg"
+                        alt="Caminha para pets"
+                        width="200"
+                    >
+                    <p>Cama média para cães e gatos.</p>
+                    <p>R$ 89,90</p>
+                </article>
+            </section>
+
+            <hr>
+
+            <!-- categoria: rações -->
+            <section>
+                <h3>Rações</h3>
+
+                <article>
+                    <h4>Ração Premium para cães</h4>
+                    <img
+                        src="imagensfw/racao1.jpg"
+                        alt="Ração Premium para cães"
+                        width="200"
+                    >
+                    <p>Alimento completo e nutritivo para cães adultos.</p>
+                    <p>Quantidade: 2,5kg</p>
+                    <p>R$ 74,90</p>
+                </article>
+
+                <article>
+                    <h4>Ração Premium para gatos</h4>
+                    <img
+                        src="imagensfw/racao2.jpg"
+                        alt="Ração Premium para gatos"
+                        width="200"
+                    >
+                    <p>Alimento completo e nutritivo para gatos adultos.</p>
+                    <p>Quantidade: 2,5kg</p>
+                    <p>R$ 74,90</p>
+                </article>
+            </section>
+
+        <hr>
+
+            <!-- categoria: higiene -->
+            <section>
+                <h3>Higiene</h3>
+
+                <article>
+                    <h4>Shampoo para cães</h4>
+                    <img
+                        src="imagensfw/higiene1.jpg"
+                        alt="Shampoo para cães"
+                        width="200"
+                    >
+                    <p>Shampoo neutro para cães adultos.</p>
+                    <p>Quantidade: 300ml</p>
+                    <p>R$ 54,90</p>
+                    
+                </article>
+
+                <article>
+                    <h4>Bandeja higiênica</h4>
+                    <img
+                        src="imagensfw/higiene2.jpg"
+                        alt="Bandeja higiênica"
+                        width="200"
+                    >
+                    <p>Caixa de areia média para gatos.</p>
+                    <p>R$ 49,90</p>
+                </article>
+            </section>
+
+        </section>
+
+        <hr>
+       
+    <!-- contato -->
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+        <p>Telefone: (51) 99999-9999</p>
+
+        <h3>Envie uma mensagem</h3>
+
+        <form id="form-contato">
+
+            <label for="contato-nome">Seu nome:</label>
+            <input
+                type="text"
+                id="contato-nome"
+                name="nome"
+                required
+            >
+
+            <br><br>
+
+            <label for="contato-email">Seu e-mail:</label>
+            <input
+                type="email"
+                id="contato-email"
+                name="email"
+                required
+            >
+
+            <br><br>
+
+            <label for="contato-mensagem">Sua mensagem:</label>
+            <br>
+
+            <textarea
+                id="contato-mensagem"
+                name="mensagem"
+                rows="5"
+                cols="30"
+                required
+            ></textarea>
+
+            <br><br>
+
+            <button type="submit">Enviar mensagem</button>
+
+            <p id="erro-contato" role="alert" aria-live="assertive"></p>
+
+            <p id="sucesso-contato" role="status" aria-live="polite"></p>
+
+        </form>
+    </section>
+
+    <hr>
+    
+    <!-- cadastro de clientes -->
+    <section id="cadastro-clientes">
+        <h2>Cadastro de Clientes</h2>
+
+        <p>
+            Preencha os campos abaixo para realizar seu cadastro no MimoPet.
+        </p>
+
+        <form id="form-cliente">
+
+            <div class="mb-3">
+                <label for="nome-cliente" class="form-label">
+                    Nome completo
+                </label>
+                <input
+                    type="text" class="form-control" id="nome-cliente" name="nome" autocomplete="name" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="email-cliente" class="form-label">
+                    E-mail
+                </label>
+                <input
+                    type="email" class="form-control" id="email-cliente" name="email" autocomplete="email" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="telefone-cliente" class="form-label">
+                    Telefone
+                </label>
+                <input
+                    type="tel" class="form-control" id="telefone-cliente" name="telefone" autocomplete="tel" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="cpf-cliente" class="form-label">
+                    CPF
+                </label>
+                <input
+                    type="text" class="form-control" id="cpf-cliente" name="cpf" placeholder="000.000.000-00" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="sexo-cliente" class="form-label">
+                    Sexo
+                </label>
+                <select
+                    class="form-select" id="sexo-cliente" name="sexo" required>
+                    <option value="">Selecione</option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Não informar">Não informar</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="nascimento-cliente" class="form-label">
+                    Data de nascimento
+                </label>
+                <input
+                    type="date" class="form-control" id="nascimento-cliente" name="dataNascimento" autocomplete="bday" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary"> Cadastrar cliente </button>
+
+        </form>
+    </section>
+    
+    <!-- cadastro de pets -->
+    <section id="cadastro-pets">
+        <h2>Cadastro de Pets</h2>
+
+        <p>
+            Cadastre seu melhor amigo para que possamos oferecer o melhor atendimento!
+            <small>Cadastre-se como cliente antes de casdastrar seu pet.</small>
+        </p>
+
+        <form id="form-pet">
+
+            <div class="mb-3">
+                <label for="cliente-pet" class="form-label">
+                    Tutor do pet
+                </label>
+
+                <select
+                    class="form-select"
+                    id="cliente-pet"
+                    name="clienteId"
+                    required
+                >
+                    <option value="">Selecione o tutor</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="nome-pet" class="form-label">
+                    Nome do pet
+                </label>
+                <input
+                    type="text" class="form-control" id="nome-pet" name="nome" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="especie-pet" class="form-label">
+                    Espécie
+                </label>
+                <select
+                    class="form-select" id="especie-pet" name="especie" required>
+                    <option value="">Selecione a espécie</option>
+                    <option value="Cão">Cão</option>
+                    <option value="Gato">Gato</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="raca-pet" class="form-label">
+                    Raça
+                </label>
+                <input
+                    type="text" class="form-control" id="raca-pet" name="raca" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="idade-pet" class="form-label">
+                    Idade
+                </label>
+
+                <div class="row">
+                    <div class="col-6">
+                        <input
+                            type="number" class="form-control" id="idade-pet" name="idade" min="0" step="1" placeholder="Idade" required>
+                    </div>
+
+                    <div class="col-6">
+                        <label for="unidade-idade" class="visually-hidden">
+                            Unidade da idade
+                        </label>
+                        <select
+                            class="form-select" id="unidade-idade" name="unidadeIdade" required>
+                            <option value="meses">Meses</option>
+                            <option value="anos">Anos</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="observacoes-pet" class="form-label">
+                    Observações
+                </label>
+
+                <textarea
+                    class="form-control" id="observacoes-pet" name="observacoes" rows="4"
+                    placeholder="Informe alergias, comportamento, cuidados especiais, etc."
+                ></textarea>
+            </div>
+
+            <div id="erro-cadastro-pet"
+                role="alert"
+                aria-live="assertive">
+            </div>
+
+            <div id="sucesso-cadastro-pet"
+                role="status"
+                aria-live="polite">
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                Cadastrar pet
+            </button>
+
+        </form>
+    </section>
+
+    <!-- agendamentos-->
+    <section id="agendamento">
+        <h2>Agendamento de Serviços</h2>
+
+        <p>
+            Escolha o serviço e agende um horário para seu pet!
+            <small>Realize os cadastros anteriores antes de agendar um serviço.</small>
+        </p>
+
+        <form id="form-agendamento">
+
+            <div class="mb-3">
+                <label for="cliente-agendamento" class="form-label">
+                    Cliente
+                </label>
+
+                <select
+                    class="form-select"
+                    id="cliente-agendamento"
+                    name="clienteId"
+                    required
+                >
+                    <option value="">Selecione o cliente</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="pet-agendamento" class="form-label">
+                    Pet
+                </label>
+
+                <select
+                    class="form-select"
+                    id="pet-agendamento"
+                    name="petId"
+                    required
+                    disabled
+                >
+                    <option value="">Selecione primeiro o cliente</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="servico-agendamento" class="form-label">
+                    Serviço
+                </label>
+
+                <select
+                    class="form-select"
+                    id="servico-agendamento"
+                    name="servico"
+                    required
+                >
+                    <option value="">Selecione o serviço</option>
+                    <option value="Banho">Banho</option>
+                    <option value="Tosa">Tosa</option>
+                    <option value="Banho e tosa">Banho e tosa</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="data-agendamento" class="form-label">
+                    Data do serviço
+                </label>
+
+                <input
+                    type="date"
+                    class="form-control"
+                    id="data-agendamento"
+                    name="data"
+                    required
+                    aria-describedby="orientacao-data"
+                >
+
+                <small id="orientacao-data" class="form-text">
+                    Atendemos de segunda a sábado.
+                </small>
+            </div>
+
+            <div class="mb-3">
+                <label for="horario-agendamento" class="form-label">
+                    Horário de início do serviço
+                </label>
+
+                <input
+                    type="time"
+                    class="form-control"
+                    id="horario-agendamento"
+                    name="horario"
+                    min="09:00"
+                    max="16:30"
+                    step="1800"
+                    required
+                >
+
+                <small class="form-text">Cada serviço tem duração de 1 hora e 30 minutos.O último horário de início é às 16h30.</small>
+            </div>
+
+            <fieldset class="mb-3">
+                <legend class="form-label">
+                    Como o pet chegará ao MimoPet?
+                </legend>
+
+                <div class="form-check">
+                    <input
+                        type="radio"
+                        class="form-check-input"
+                        id="levar-pet"
+                        name="modalidade"
+                        value="Cliente levará o pet"
+                        required
+                    >
+
+                    <label class="form-check-label" for="levar-pet">
+                        Levarei meu pet ao estabelecimento
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input
+                        type="radio"
+                        class="form-check-input"
+                        id="tele-busca"
+                        name="modalidade"
+                        value="Tele-busca"
+                        required
+                    >
+
+                    <label class="form-check-label" for="tele-busca">
+                        Desejo solicitar tele-busca
+                    </label>
+                </div>
+            </fieldset>
+
+            <div id="dados-telebusca" hidden>
+
+                <h3>Informações da tele-busca</h3>
+
+                <div class="mb-3">
+                    <label for="endereco-telebusca" class="form-label">
+                        Endereço para buscar o pet
+                    </label>
+
+                    <textarea
+                        class="form-control"
+                        id="endereco-telebusca"
+                        name="endereco"
+                        rows="3"
+                        placeholder="Informe rua, número, bairro e complemento."
+                        disabled
+                    ></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="horario-telebusca" class="form-label">
+                        Horário da tele-busca
+                    </label>
+
+                    <input
+                        type="time"
+                        class="form-control"
+                        id="horario-telebusca"
+                        name="horarioTelebusca"
+                        min="09:00"
+                        max="18:00"
+                        step="1800"
+                        disabled
+                    >
+
+                </div>
+
+            </div>
+
+            <p><small>Recomendamos que você chegue com seu pet 10 minutos antes do horário agendado.</small></p>
+
+            <div
+                id="erro-agendamento"
+                role="alert"
+                aria-live="assertive"
+            ></div>
+
+            <div
+                id="sucesso-agendamento"
+                role="status"
+                aria-live="polite"
+            ></div>
+
+            <button type="submit" class="btn btn-primary">
+                Agendar serviço
+            </button>
+
+        </form>
+    </section>
+
+
+    <!-- endereço -->
+    <section id="endereco">
+        <h2>Onde estamos</h2>
+        <p>Endereço: Rua dos Gatos, 1234</p>
+        <p>Horário: Segunda a sábado, das 9h às 18h.</p>
+    </section>
+
+    </main>
+
+    <hr>
+
+    <!-- rodapé -->
+        <footer>
+            <h3>Links úteis</h3>
+
+            <ul>
+                <li><a href="#inicio">Voltar ao início</a></li>
+                <li><a href="#servicos">Nossos serviços</a></li>
+                <li><a href="#produtos">Nossos produtos</a></li>
+                <li><a href="#contato">Fale com a gente</a></li>
+                <li><a href="#endereco">Onde estamos</a></li>
+                <li><a href="#cadastro-clientes">Cadastro</a></li>
+                <li><a href="#cadastro-pets">Cadastro de Pets</a></li>
+            </ul>
+
+            <h3>Contato</h3>
+
+            <p>Telefone: (51) 99999-9999</p>
+
+            <h3>Informações legais</h3>
+
+            <p>Projeto desenvolvido por: Clara Chagas de Oliveira</p>
+            <p>&copy; 2026 MimoPet - Todos os direitos reservados.</p>
+
+            <p>Feito com 💜 para os nossos pets!</p>
+
+        </footer>
+
+    <!-- bootstrap JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- arquivos JavaScript -->
+        <script src="js/clientes.js" defer></script>
+        <script src="js/pets.js" defer></script>
+        <script src="js/agendamentos.js" defer></script>
+        <script src="js/acessibilidade.js" defer></script>
+        <script src="js/contato.js" defer></script>
+        <script src="js/horario.js" defer></script>
+
+    </body>
+    </html>

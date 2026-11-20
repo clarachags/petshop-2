@@ -1,0 +1,556 @@
+/* =================================
+   1. configurações gerais
+================================= */
+:root {
+    --roxo: #8064A8;
+    --lilas: #E8DDF2;
+    --pessego: #F8E8D8;
+    --creme: #FFF9F3;
+    --texto: #48404D;
+    --branco: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--creme);
+    color: var(--texto);
+    line-height: 1.7;
+}
+
+/* =================================
+   2. cabeçalho e menu
+================================= */
+header {
+    background-color: var(--roxo);
+    color: var(--branco);
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    font-size: 2.3rem;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 25px;
+}
+
+nav a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--pesssego);
+}
+
+/* =================================
+   3. seções principais
+================================= */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+main > section {
+    padding: 50px 20px;
+}
+
+h2 {
+    color: var(--roxo);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+h3 {
+    color: var(--roxo);
+    margin-bottom: 10px;
+}
+
+h4 {
+    color: var(--texto);
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+hr {
+    border: 0;
+    border-top: 2px solid var(--lilas);
+}
+
+/* =================================
+   4. apresentação
+================================= */
+#inicio {
+    text-align: center;
+}
+
+#inicio img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 20px;
+    margin: 25px 0;
+    box-shadow: 0 5px 15px rgba(72, 64, 77, 0.12);
+}
+
+#inicio a {
+    display: inline-block;
+    background-color: var(--roxo);
+    color: var(--branco);
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+#inicio a:hover {
+    background-color: #684C91;
+}
+
+/* =================================
+   4.1 carrossel de imagens
+================================= */
+#carouselMimoPet {
+    max-width: 1000px;
+    margin: 30px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(72, 64, 77, 0.15);
+}
+
+#carouselMimoPet .carousel-item img {
+    width: 100%;
+    max-width: none;
+    height: 520px;
+    margin: 0;
+    object-fit: cover;
+}
+
+#carouselMimoPet .carousel-caption {
+    background-color: rgba(72, 64, 77, 0.75);
+    border-radius: 12px;
+    padding: 12px;
+    bottom: 35px;
+}
+
+#carouselMimoPet .carousel-caption h5 {
+    color: var(--branco);
+    font-weight: 800;
+}
+
+#carouselMimoPet .carousel-caption p {
+    color: var(--branco);
+    margin-bottom: 0;
+}
+
+#carouselMimoPet .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+#carouselMimoPet .carousel-control-prev-icon,
+#carouselMimoPet .carousel-control-next-icon {
+    background-color: rgba(72, 64, 77, 0.55);
+    border-radius: 50%;
+    padding: 20px;
+}
+
+/* responsividade */
+
+@media (max-width: 768px) {
+
+    #carouselMimoPet .carousel-item img {
+        height: 350px;
+    }
+
+    #carouselMimoPet .carousel-caption {
+        bottom: 25px;
+        padding: 8px;
+    }
+
+    #carouselMimoPet .carousel-caption h5 {
+        font-size: 1rem;
+    }
+
+    #carouselMimoPet .carousel-caption p {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #carouselMimoPet .carousel-item img {
+        height: 260px;
+    }
+
+    #carouselMimoPet .carousel-caption {
+        bottom: 20px;
+    }
+
+    #carouselMimoPet .carousel-caption p {
+        font-size: 0.75rem;
+    }
+}
+
+/* =================================
+   5. serviços
+================================= */
+#servicos {
+    text-align: center;
+}
+
+#servicos > article {
+    display: inline-block;
+    vertical-align: top;
+    background-color: var(--branco);
+    width: 30%;
+    min-width: 220px;
+    padding: 25px 20px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(72, 64, 77, 0.08);
+    transition: transform 0.3s;
+}
+
+#servicos > article:hover {
+    transform: translateY(-5px);
+}
+
+#servicos > p {
+    margin-top: 20px;
+}
+
+/* =================================
+   6. produtos
+================================= */
+#produtos > section {
+    text-align: center;
+    margin: 30px 0;
+}
+
+#produtos article {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    min-width: 220px;
+    margin: 10px;
+    padding: 20px;
+    background-color: var(--branco);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(72, 64, 77, 0.08);
+    transition: transform 0.3s;
+}
+
+#produtos article:hover {
+    transform: translateY(-5px);
+}
+
+#produtos article img {
+    width: 100%;
+    max-width: 200px;
+    height: 180px;
+    object-fit: contain;
+    margin: 10px auto;
+}
+
+#produtos article p:last-child {
+    color: var(--roxo);
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+/* =================================
+   7. contato e formulários
+================================= */
+#contato {
+    text-align: center;
+}
+
+#contato form {
+    max-width: 550px;
+    margin: 25px auto 0;
+    padding: 30px;
+    background-color: var(--branco);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(72, 64, 77, 0.08);
+    text-align: left;
+}
+
+#contato label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+#contato input,
+#contato textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #D5C9DF;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+#contato input:focus,
+#contato textarea:focus {
+    outline: 2px solid var(--roxo);
+    outline-offset: 2px;
+}
+
+#contato textarea {
+    resize: vertical;
+}
+
+#contato button {
+    background-color: var(--roxo);
+    color: var(--branco);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contato button:hover {
+    background-color: #684C91;
+}
+
+/* =================================
+   8. endereço
+================================= */
+#endereco {
+    text-align: center;
+}
+
+/* =================================
+   9. rodapé
+================================= */
+footer {
+    background-color: var(--roxo);
+    color: var(--branco);
+    text-align: center;
+    padding: 35px 20px;
+}
+
+footer h3 {
+    color: var(--pessego);
+    margin: 15px 0;
+}
+
+footer ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+footer a {
+    color: var(--branco);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--pessego);
+    text-decoration: underline;
+}
+
+footer > p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+footer > ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* =================================
+   10. responsividade
+================================= */
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav {
+        gap: 10px 15px;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    main > section {
+        padding: 35px 15px;
+    }
+
+    #servicos > article,
+    #produtos article {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    #contato form {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 0.95rem;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+}
+
+/* destaque para navegação por teclado */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #48404D;
+    outline-offset: 4px;
+}
+
+/* ================================
+   11. acessibilidade - leitura por voz
+================================ */
+.acessibilidade {
+    background-color: #E8DDF2;
+    padding: 20px;
+    margin: 20px auto;
+    text-align: center;
+    border-radius: 12px;
+    max-width: 1000px;
+}
+
+.acessibilidade h2 {
+    color: #48404D;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.acessibilidade p {
+    color: #48404D;
+}
+
+.controles-leitura {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.controles-leitura button {
+    background-color: #8064A8;
+    color: #FFFFFF;
+    border: 2px solid #8064A8;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.controles-leitura button:hover {
+    background-color: #624986;
+    border-color: #624986;
+}
+
+.controles-leitura button:focus-visible {
+    outline: 3px solid #48404D;
+    outline-offset: 4px;
+}
+
+.controles-leitura button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+#status-leitura {
+    margin-top: 12px;
+    font-weight: 600;
+    color: #48404D;
+}
+
+@media (max-width: 576px) {
+    .controles-leitura {
+        flex-direction: column;
+    }
+
+    .controles-leitura button {
+        width: 100%;
+    }
+}
+/* ================================
+    12. horário de funcionamento
+================================ */
+#status-funcionamento {
+    margin: 15px auto;
+    text-align: center;
+}
+
+#mensagem-funcionamento {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 700;
+    background-color: #E8DDF2;
+    color: #48404D;
+    margin: 0;
+}
+#mensagem-funcionamento.aberto {
+    background-color: #DDF2E3;
+    color: #245C35;
+}
+
+#mensagem-funcionamento.fechado {
+    background-color: #F8E8D8;
+    color: #8A3F35;
+}
